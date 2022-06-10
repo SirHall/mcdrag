@@ -35,28 +35,28 @@ pub struct MCDRAG
 impl MCDRAG
 {
     pub fn new(
-        projectile_reference_diameter__mm : Float,
-        projectile_length__calibers : Float,
-        nose_length__calibers : Float,
-        rt_r__headshape_parameter : Float,
-        boattail_length__calibers : Float,
-        base_diameter__calibers : Float,
-        meplat_diameter__calibers : Float,
-        rotating_band__diameter : Float,
-        center_of_gravity_location__calibers_from_nose : Float,
+        projectile_reference_diameter_mm : Float,
+        projectile_length_calibers : Float,
+        nose_length_calibers : Float,
+        rt_r_headshape_parameter : Float,
+        boattail_length_calibers : Float,
+        base_diameter_calibers : Float,
+        meplat_diameter_calibers : Float,
+        rotating_band_diameter : Float,
+        center_of_gravity_location_calibers_from_nose : Float,
         boundary_layer_code : BoundaryLayerCode,
     ) -> Self
     {
         Self {
-            d1 : projectile_reference_diameter__mm,
-            l1 : projectile_length__calibers,
-            l2 : nose_length__calibers,
-            r1 : rt_r__headshape_parameter,
-            l3 : boattail_length__calibers,
-            d2 : base_diameter__calibers,
-            d3 : meplat_diameter__calibers,
-            d4 : rotating_band__diameter,
-            x1 : center_of_gravity_location__calibers_from_nose,
+            d1 : projectile_reference_diameter_mm,
+            l1 : projectile_length_calibers,
+            l2 : nose_length_calibers,
+            r1 : rt_r_headshape_parameter,
+            l3 : boattail_length_calibers,
+            d2 : base_diameter_calibers,
+            d3 : meplat_diameter_calibers,
+            d4 : rotating_band_diameter,
+            x1 : center_of_gravity_location_calibers_from_nose,
             k :  boundary_layer_code,
         }
     }
@@ -288,7 +288,6 @@ impl MCDRAG
             // line 138
             if mach <= x2
             {
-                c17 = 0.0;
                 c2 = c18; // should be 'c2[i] = c17 + c18', but c17 is already '0'.
 
             // goto 181
